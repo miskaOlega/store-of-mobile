@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(23deg, rgba(0,0,0,1) 0%, rgba(40,40,43,1) 28%, rgba(0,0,0,1) 57%, rgba(40,40,43,1) 100%);
+    background-size: 150% 300%;
+    user-select: none;
+    animation-name: gradient;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+    from {
+background-position: 0% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    to{
+        background-position: 0% 0%;
+    }
+}
