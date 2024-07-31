@@ -7,21 +7,22 @@
 }
 
 #container {
-    width: 500px;
-    height: 500px;
-    border: 2px solid yellow;
+    color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo {
-    display: flex;
-    justify-content: center;
-color: wheat;
+    overflow: hidden;
+    font-size: 8vh;
 }
 
 #lineReload {
-
+font-size: 5vh;
 }
 
 #textReload {
-
+font-size: 3vh;
 }
