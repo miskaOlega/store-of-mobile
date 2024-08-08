@@ -6,7 +6,14 @@ type TypeReload = {
     opacity: string
 }
 
+
+
 export const Reload = () => {
+
+    
+    
+    
+
     const [logo ,setLogo] = useState("-50vh");
     const [reload , setReload] = useState<TypeReload> ({translate: "-5vh" , opacity: "0%"})
     
@@ -20,7 +27,7 @@ export const Reload = () => {
         } , 3000)
         setTimeout(():void => {
             const int = setInterval(():void => {
-               
+               clearInterval(int)
             } , 5000)
         } , 4000)
     } , [])
@@ -30,7 +37,7 @@ export const Reload = () => {
         <div id={style.container}>
 
         <div id={style.logo}><p style={{transform: `translateX(${logo})` , transition: "1s all linear"}}>MOB-X</p></div>
-        <div id={style.lineReload}><p>|||||||||||||||||||||</p></div>
+        <div id={style.lineReload}><p></p></div>
         <div id={style.textReload}><p style={{transform: `translateY(${reload.translate})` , opacity: `${reload.opacity}` , transition: "1s all linear"}}>Loading</p></div>
 
         </div>
