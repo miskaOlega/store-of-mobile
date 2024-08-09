@@ -10,10 +10,6 @@ type TypeReload = {
 
 export const Reload = () => {
 
-    
-    
-    
-
     const [logo ,setLogo] = useState("-50vh");
     const [reload , setReload] = useState<TypeReload> ({translate: "-5vh" , opacity: "0%"})
     
