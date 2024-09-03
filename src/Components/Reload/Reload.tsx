@@ -1,20 +1,31 @@
-import { useMemo, useState } from 'react'
-import style from '../../style/styleOfReload.module.css'
+import { useMemo, useState } from 'react';
+import style from '../../style/styleOfReload.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import {getApi} from '../../redux/slice'
+import {AppDispatch , RootState} from "../../redux/store"
 
 type TypeReload = {
     translate: string ,
     opacity: string
-}
+};
 
 
 
 export const Reload = () => {
-
+    const useAppDispatch = useDispatch.withTypes<AppDispatch>()
+    const useAppSelector = useSelector.withTypes<RootState>()
+    const statuse = useAppSelector(state => state.one)
+    const dispatch = useAppDispatch() 
+    const [palka , setPalka] = useState();
     const [logo ,setLogo] = useState("-50vh");
-    const [reload , setReload] = useState<TypeReload> ({translate: "-5vh" , opacity: "0%"})
+    const [reload , setReload] = useState<TypeReload> ({translate: "-5vh" , opacity: "0%"});
+
+
+   
     
 
     useMemo(() => {
+        dispatch(getApi());
          setTimeout((): void => {
             setLogo("0vh")
         } , 1000)
@@ -23,7 +34,7 @@ export const Reload = () => {
         } , 3000)
         setTimeout(():void => {
             const int = setInterval(():void => {
-               clearInterval(int)
+               clearInterval(int);
             } , 5000)
         } , 4000)
     } , [])
