@@ -20,7 +20,9 @@
 }
 
 #lineReload {
-font-size: 5vh;
+font-size: 4vh;
+position: absolute;
+top: 47vh
 }
 
 #textReload {

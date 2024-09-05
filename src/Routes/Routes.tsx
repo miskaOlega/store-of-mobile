@@ -9,6 +9,7 @@ export const Routers = () => {
         <>
         <Routes>
         <Route path="/" element={<Reload />} />
+        <Route path="/main" element={<Main />} />
         </Routes>
         </>
     )

@@ -1,34 +1,22 @@
-import style from "../../style/styleOfMain.module.css"
+import { useSelector, useDispatch } from "react-redux"
+import style from "../../style/styleOfMain.module.css";
+import {AppDispatch , RootState} from "../../redux/store";
+import { useMemo } from "react";
+import {getApi} from '../../redux/slice';
 
 
 export const Main = () => {
+    const useAppDispatch = useDispatch.withTypes<AppDispatch>();
+    const useAppSelector = useSelector.withTypes<RootState>();
+    const dispatch = useAppDispatch();
+    const slice = useAppSelector(state => state.one);
 
+    useMemo(() => {
+        dispatch(getApi());
+    } , [])
+   
     return (
        <>
-       <div id={style.container}>
-
-        <header id={style.header}>
-            <h1>MOB-X</h1>
-        </header>
-        <div id={style.menu}>
-
-<ul>
-    <li>Главная страница</li>
-    <li>О нас</li>
-    <li>Личный кабинет</li>
-    <li>Каталог товаров</li>
-    <li>Розыгрыши</li>
-    <li>Новости</li>
-</ul>
-
-</div>
-
-
-
-
-        <footer id={style.footer}></footer>
-
-       </div>
        </> 
     )
 }
