@@ -14,9 +14,16 @@ export const Main = () => {
     useMemo(() => {
         dispatch(getApi());
     } , [])
-   
+   console.log(slice.api)
     return (
        <>
+       <header id={style.headerMain}>
+
+        <div id={style.logo}><h1>MOB-X</h1></div>
+        <div id={style.brochure}></div>
+        <div id={style.kabinet}></div>
+
+       </header>
        </> 
     )
 }

@@ -1,0 +1,49 @@
+header#headerMain {
+border: 1px solid red;
+display: flex;
+justify-content: space-between ;
+}
+
+div#logo {
+    border: 1px solid yellow;
+    flex-basis: 15%;
+h1 {
+    -webkit-text-stroke-width: 0.1vh;
+    -webkit-text-stroke-color: azure;
+    font-size: 7vh;
+    text-align: center;
+    background: linear-gradient(23deg, rgba(0,0,0,1) 0%, rgba(255,4,4,1) 44%, rgba(0,0,0,1) 86%);
+    background-size: 150% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: gradient;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+}
+
+div#brochure {
+    flex-basis: 70%;
+    border: 1px solid green;
+}
+
+div#kabinet {
+    flex-basis: 15%;
+    border: 1px solid blue;
+}
+
+@keyframes gradient {
+    from {
+background-position: 0% 0%;
+filter: drop-shadow(0vh 0vh 2vh blue);
+    }
+    50% {
+        background-position: 0% 100%;
+        filter: drop-shadow(0vh 0vh 0vh red);
+    }
+    to{
+        background-position: 0% 0%;
+        filter: drop-shadow(0vh 0vh 2vh blue);
+    }
+}

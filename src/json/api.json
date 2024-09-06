@@ -1,12 +1,10 @@
 {
     "api": [
         {
-            "id": "1" ,
-            "name": "Anna"
-        } , 
-        {
-            "id": "2" ,
-            "name": "Oleg"
+            "people": [
+                {"id": 0, "name": "Anna"} ,
+                {"id": 1 , "name": "Oleg"}
+            ]
         }
     ]
 }
